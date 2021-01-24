@@ -6,6 +6,9 @@ import Home from './home/Home'
 import Footer from './footer/Footer'
 import Login from './login/Login'
 import Register from './register/Register'
+import User from './user/User'
+import Admin from './admin/Admin'
+import Logout from './logout/Logout'
 
 function App() {
   return (
@@ -16,9 +19,18 @@ function App() {
           <Route path='/login'>
             <Login />
           </Route>
-          <Route path='/logout'>Logout</Route>
+          <Route path='/logout'>
+            <Logout/>
+          </Route>
+          
           <Route path='/register'>
             <Register />
+          </Route>
+          <Route path='/admin'>
+            <Admin />
+          </Route>
+          <Route path='/user'>
+            <User />
           </Route>
           <Route path='/' component={Home} />
           <Route path='/'></Route>
