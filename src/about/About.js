@@ -4,7 +4,6 @@ import about1 from "../images/about1.png";
 import about2 from "../images/about2.png";
 import "./About.css";
 
-import "./About.css";
 function About() {
   return (
     <div className="about-us-area pdt-50">

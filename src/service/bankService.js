@@ -1,5 +1,5 @@
 import axios from 'axios'
-//import axiosInstance from './axiosInstance'
+import axiosInstance from './axiosInstance'
 
 const BASE_URL = 'http://localhost:8080'
 
@@ -10,9 +10,16 @@ class BankService {
   register(userInfo) {
     return axios.post(BASE_URL + '/auth/register', userInfo)
   }
-  // balance() {
-  //   //return axiosInstance.get(BASE_URL + '/account/balance')
-  //   return 1000;
-  // }
+  deposit(userInfo) {
+    return axiosInstance.post(BASE_URL + '/account/deposit', userInfo)
+  }
+
+  withdraw(userInfo) {
+    return axiosInstance.post(BASE_URL + '/account/withdraw', userInfo)
+  }
+
+  balance() {
+    return axiosInstance.get(BASE_URL + '/account/balance')
+  }
 }
 export default new BankService()

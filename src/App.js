@@ -9,7 +9,7 @@ import Register from './register/Register'
 import User from './user/User'
 import Admin from './admin/Admin'
 import Logout from './logout/Logout'
-
+import Deposit  from './deposit/Deposit'
 function App() {
   return (
     <Router>
@@ -32,7 +32,13 @@ function App() {
           <Route path='/user'>
             <User />
           </Route>
+
+          <Route path="/deposit">
+            <Deposit />
+          </Route>
+          
           <Route path='/' component={Home} />
+
           <Route path='/'></Route>
         </Switch>
         <Footer />
